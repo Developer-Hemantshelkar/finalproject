@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Kheti Saathi</title>
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+
+  <link rel="stylesheet" href="static/css/style.css"/>
+  <link rel="stylesheet" href="static/css/auth.css"/>
+</head>
+<body>
+
+<!-- ================= NAVBAR ================= -->
+<nav class="navbar">
+  <div class="logo">🌱 Kheti Saathi</div>
+
+  <ul class="nav-links" id="navLinks">
+    <li><a href="#">Home</a></li>
+    <li><a href="#">Organic Tips</a></li>
+    <li><a href="#">Learning</a></li>
+    <li><a href="#">Contact</a></li>
+  </ul>
+
+  <button class="login-btn" onclick="openAuth()">Login</button>
+
+  <i class="fas fa-bars menu-icon" onclick="toggleNav()"></i>
+</nav>
+
+<!-- ================= GRID LAYOUT ================= -->
+<div class="layout">
+  
+
+  <!-- ===== Sidebar ===== -->
+  <aside class="sidebar" id="sidebar">
+    <a href="#"><i class="fas fa-robot"></i> AI Chatbot</a>
+    <a href="/login" onclick="openAuth()"><i class="fas fa-seedling"></i> Organic Tips</a>
+    <a href="#"><i class="fas fa-bug"></i> Pest Impact</a>
+    <a href="#"><i class="fas fa-book"></i> Learning</a>
+    <a href="#"><i class="fas fa-hands-helping"></i> Guidance</a>
+  </aside>
+
+  <!-- ===== Main Content ===== -->
+   
+  <main class="content">
+    <section class="hero">
+      <div class="hero-content">
+        <h1>Empowering Farmers with <span>Organic Intelligence</span></h1>
+        <p>
+          Kheti Saathi is your digital companion for organic farming,
+          sustainable agriculture, and smart AI-powered guidance.
+        </p>
+    
+        <div class="hero-buttons">
+          <button onclick="openAuth()">Get Started</button>
+          <button class="outline">Learn More</button>
+        </div>
+      </div>
+    
+      <div class="hero-image">
+        <img src="static/assets/images/organic.jpg" alt="Organic Farming">
+      </div>
+    </section>
+    
+
+    <div class="cards">
+      <div class="card">
+        <i class="fas fa-leaf"></i>
+        <h3>100% Organic</h3>
+        <p>Natural farming methods</p>
+      </div>
+
+      <div class="card">
+        <i class="fas fa-robot"></i>
+        <h3>AI Support</h3>
+        <p>Smart farming assistance</p>
+      </div>
+
+      <div class="card">
+        <i class="fas fa-globe"></i>
+        <h3>Eco Friendly</h3>
+        <p>Save soil & environment</p>
+      </div>
+    </div>
+    <section class="stats">
+      <div class="stat">
+        <h2 data-count="5000">0</h2>
+        <p>Farmers Helped</p>
+      </div>
+      <div class="stat">
+        <h2 data-count="120">0</h2>
+        <p>Organic Practices</p>
+      </div>
+      <div class="stat">
+        <h2 data-count="95">0</h2>
+        <p>% Chemical Free</p>
+      </div>
+    </section>
+    <section class="features">
+      <h2>Why Choose Kheti Saathi?</h2>
+    
+      <div class="feature-grid">
+        <div class="feature-card">
+          <i class="fas fa-robot"></i>
+          <h3>AI Chatbot</h3>
+          <p>Get instant answers for farming problems</p>
+        </div>
+    
+        <div class="feature-card">
+          <i class="fas fa-seedling"></i>
+          <h3>Organic Tips</h3>
+          <p>Natural methods to increase yield</p>
+        </div>
+    
+        <div class="feature-card">
+          <i class="fas fa-bug-slash"></i>
+          <h3>Pesticide Awareness</h3>
+          <p>Understand harmful effects of chemicals</p>
+        </div>
+    
+        <div class="feature-card">
+          <i class="fas fa-language"></i>
+          <h3>Multi-Language</h3>
+          <p>Learn in Hindi & English</p>
+        </div>
+      </div>
+    </section>
+    <section class="how-it-works">
+      <h2>How Kheti Saathi Works</h2>
+    
+      <div class="steps">
+        <div class="step">
+          <span>1</span>
+          <h3>Register</h3>
+          <p>Create your free account</p>
+        </div>
+    
+        <div class="step">
+          <span>2</span>
+          <h3>Ask & Learn</h3>
+          <p>Use AI chatbot & learning modules</p>
+        </div>
+    
+        <div class="step">
+          <span>3</span>
+          <h3>Grow Organically</h3>
+          <p>Apply sustainable techniques</p>
+        </div>
+      </div>
+    </section>
+    <section class="tips-preview">
+      <h2>Popular Organic Tips</h2>
+    
+      <div class="tips-grid">
+        <div class="tip-card">
+          <img src="static/assets/images/compost and vermiculture.jpg">
+          <h4>Soil Health</h4>
+          <p>Use compost & vermiculture</p>
+        </div>
+    
+        <div class="tip-card">
+          <img src="static/assets/images/neem.png">
+          <h4>Natural Pest Control</h4>
+          <p>Neem oil & cow urine spray</p>
+        </div>
+    
+        <div class="tip-card">
+          <img src="static/assets/images/irrigation.png">
+          <h4>Water Management</h4>
+          <p>Drip irrigation & mulching</p>
+        </div>
+      </div>
+    </section>
+    <section class="cta">
+      <h2>Start Your Organic Journey Today 🌾</h2>
+      <p>Join thousands of farmers building a sustainable future</p>
+      <button onclick="openAuth()">Join Now</button>
+    </section>
+        
+  </main>
+
+</div>
+
+<!-- ================= CHATBOT BUTTON ================= -->
+<button class="chatbot-btn">
+  <i class="fas fa-comments"></i>
+</button>
+
+<!-- ================= LOGIN / SIGNUP MODAL ================= -->
+
+<!-- AUTH MODAL -->
+<div class="auth-modal" id="authModal">
+  <div class="auth-box">
+
+    <span class="auth-close" onclick="closeAuth()">&times;</span>
+
+    <div class="auth-tabs">
+      <button id="loginTab" onclick="showLogin()">Login</button>
+      <button id="signupTab" onclick="showSignup()">Signup</button>
+    </div>
+
+    <!-- LOGIN FORM -->
+    <form class="auth-form" id="loginForm" method="POST" action="/login">
+      <input type="email" name="email" placeholder="Email" required>
+      <input type="password" name="password" placeholder="Password" required>
+      <button type="submit">Login</button>
+    </form>
+
+    <!-- SIGNUP FORM -->
+    <form class="auth-form" id="signupForm" method="POST" action="/signup">
+      <input type="text" name="name" placeholder="Name" required>
+      <input type="email" name="email" placeholder="Email" required>
+      <input type="password" name="password" placeholder="Password" required>
+
+      <select name="role">
+        <option value="farmer">Farmer</option>
+        <option value="admin">Admin</option>
+      </select>
+
+      <button type="submit">Signup</button>
+    </form>
+
+  </div>
+</div>
+<footer>
+  <p>© 2026 Kheti Saathi | Organic Farming Companion</p>
+  <div class="social">
+    <i class="fab fa-facebook"></i>
+    <i class="fab fa-youtube"></i>
+    <i class="fab fa-instagram"></i>
+  </div>
+</footer>
+
+<script src="static/js/script.js"></script>
+<script src="static/js/auth.js"></script>
+</body>
+</html>

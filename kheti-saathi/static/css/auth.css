@@ -1,0 +1,97 @@
+/* ===== AUTH MODAL BACKGROUND ===== */
+.auth-modal {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.6);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+  }
+  
+  /* ===== MODAL BOX ===== */
+  .auth-box {
+    background: #ffffff;
+    width: 360px;
+    padding: 25px;
+    border-radius: 12px;
+    position: relative;
+    animation: scaleIn 0.3s ease;
+  }
+  
+  /* ===== CLOSE BUTTON ===== */
+  .auth-close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 22px;
+    cursor: pointer;
+  }
+  
+  /* ===== TOGGLE BUTTONS ===== */
+  .auth-tabs {
+    display: flex;
+    margin-bottom: 20px;
+  }
+  
+  .auth-tabs button {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    background: #e0e0e0;
+    font-weight: bold;
+  }
+  
+  .auth-tabs button.active {
+    background: #2e7d32;
+    color: white;
+  }
+  
+  /* ===== FORM ===== */
+  .auth-form {
+    display: none;
+  }
+  
+  .auth-form.active {
+    display: block;
+  }
+  
+  .auth-form input,
+  .auth-form select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 12px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+  }
+  
+  .auth-form button {
+    width: 100%;
+    padding: 10px;
+    background: #2e7d32;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+  
+  /* ===== ANIMATION ===== */
+  @keyframes scaleIn {
+    from {
+      transform: scale(0.8);
+      opacity: 0;
+    }
+    to {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+  
+  /* ===== MOBILE ===== */
+  @media (max-width: 480px) {
+    .auth-box {
+      width: 90%;
+    }
+  }
+  

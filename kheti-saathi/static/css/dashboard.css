@@ -1,0 +1,89 @@
+body {
+    font-family: Arial;
+    background: #f4f9f4;
+  }
+  
+  /* TOP BAR */
+  .topbar {
+    background: #2e7d32;
+    color: white;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  /* LAYOUT */
+  .dashboard {
+    display: grid;
+    grid-template-columns: 220px 1fr;
+    height: calc(100vh - 60px);
+  }
+  
+  /* SIDEBAR */
+  .dash-sidebar {
+    background: #e8f5e9;
+    padding: 20px;
+  }
+  
+  .dash-sidebar button {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 10px;
+    border: none;
+    background: white;
+    cursor: pointer;
+  }
+  
+  /* CONTENT */
+  .dash-content {
+    padding: 30px;
+    overflow-y: auto;
+  }
+  
+  .section {
+    display: none;
+  }
+  
+  .section.active {
+    display: block;
+  }
+  
+  /* TIPS */
+  .tips-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px,1fr));
+    gap: 20px;
+  }
+  
+  .tip-card {
+    background: white;
+    padding: 10px;
+    border-radius: 10px;
+  }
+  
+  .tip-card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+  }
+  
+  /* QUIZ */
+  .quiz-box {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 500px;
+  }
+  
+  .options button {
+    width: 100%;
+    margin: 5px 0;
+    padding: 10px;
+  }
+  
+  .quiz-nav {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+  }
+  

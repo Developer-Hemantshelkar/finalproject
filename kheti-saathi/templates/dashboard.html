@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Farmer Dashboard | Kheti Saathi</title>
+
+  <link rel="stylesheet" href="/static/css/dashboard.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+<!-- ===== TOP BAR ===== -->
+<header class="topbar">
+  <h2>🌱 Kheti Saathi Dashboard</h2>
+  <h2>Welcome {{ session['user'] }} 🌾</h2>
+  <a href="/logout">Logout</a>
+  <select onchange="changeLang(this.value)">
+    <option value="en">English</option>
+    <option value="hi">हिंदी</option>
+  </select>
+</header>
+
+<!-- ===== DASHBOARD LAYOUT ===== -->
+<div class="dashboard">
+    
+  <!-- SIDEBAR -->
+  <aside class="dash-sidebar">
+    <button onclick="showSection('tips')">
+      <i class="fas fa-seedling"></i> Organic Tips
+    </button>
+
+    <button onclick="showSection('quiz')">
+      <i class="fas fa-question-circle"></i> Quiz
+    </button>
+
+    <button>
+      <i class="fas fa-robot" onclick="openChat()"></i> AI Chatbot
+    </button>
+  </aside>
+
+  <!-- MAIN CONTENT -->
+  <main class="dash-content">
+
+    <!-- ORGANIC TIPS -->
+    <section id="tips" class="section active">
+      <h3>🌾 Organic Farming Tips</h3>
+
+      <div class="tips-grid">
+        <div class="tip-card">
+          <img src="/static/assets/images/compost and vermiculture.jpg">
+          <h4>Soil Health</h4>
+          <p>Use compost, green manure, vermiculture.</p>
+        </div>
+
+        <div class="tip-card">
+          <img src="/static/assets/images/neem.png">
+          <h4>Natural Pest Control</h4>
+          <p>Neem oil, garlic spray, cow urine.</p>
+        </div>
+
+        <div class="tip-card">
+          <img src="/static/assets/images/irrigation.png">
+          <h4>Water Management</h4>
+          <p>Drip irrigation, mulching.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- QUIZ -->
+    <section id="quiz" class="section">
+      <h3>📝 Organic Farming Quiz</h3>
+
+      <div class="quiz-box">
+        <p id="question"></p>
+
+        <div class="options">
+          <button onclick="selectOption(0)" id="opt0"></button>
+          <button onclick="selectOption(1)" id="opt1"></button>
+          <button onclick="selectOption(2)" id="opt2"></button>
+          <button onclick="selectOption(3)" id="opt3"></button>
+        </div>
+
+        <div class="quiz-nav">
+          <button onclick="prevQuestion()">Previous</button>
+          <button onclick="nextQuestion()">Next</button>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+</div>
+
+<script src="/static/js/dashboard.js"></script>
+</body>
+</html>
+
